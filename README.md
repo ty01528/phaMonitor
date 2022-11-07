@@ -1,5 +1,7 @@
 # Phala Stake Pool Monitor
 
+#### Improved by project： https://github.com/Phala-Network/mining-data-server
+
 A node.js server for stake pool monitor.
 
 ## Environment
