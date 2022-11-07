@@ -37,10 +37,14 @@ yarn start
 ### Create new subscriber
  * `POST  /register Content-Type: application/json {"pid": XXXX,"email": "XXXX@XXX.com"}`
 
+    example: ``curl -H "Content-Type: application/json" -X POST -d '{"pid": XXXX,"email": "XXXX@XXX.com"}'  http://localhost:3001/register``
+
 ####  Your first subscription will be notified by email
 
 ### Show all subscribers
  * `GET  /pid-list`
+
+   example: ``curl http://localhost:3001/pid-list``
 
 
 ### It is recommended to use pm2 to keep service alive
