@@ -11,7 +11,7 @@ A node.js server for stake pool monitor.
 
 ## Clone
 ```shell
-  git clone
+  git clone https://github.com/ty01528/phaMonitor.git
 ```
 ## Notice！
 ### 1. Please make sure you have installed node.js and yarn.
