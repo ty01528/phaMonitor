@@ -44,4 +44,8 @@ yarn start
 
 
 ### It is recommended to use pm2 to keep service alive
-npm install -g pm2
+``` 
+    npm install -g pm2
+    cd phaMonitor
+    pm2 start dist/index.js --name="phaMonitor"
+```
