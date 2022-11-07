@@ -1,0 +1,13 @@
+{
+  "extends": "@tsconfig/node16/tsconfig.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "dist"
+  },
+  "ts-node": {"files": true},
+  "paths": {
+    "@polkadot/api/augment": ["interfaces/augment-api.ts"],
+    "@polkadot/types/augment": ["interfaces/augment-types.ts"]
+  },
+  "include": ["**/*.ts"]
+}

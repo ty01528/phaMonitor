@@ -1,0 +1,55 @@
+{
+  "name": "miner-data-server",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "packageManager": "yarn@3.2.3",
+  "scripts": {
+    "build": "del dist && tsc",
+    "dev": "ts-node src/index.ts",
+    "start": "NODE_ENV=production node dist/index.js",
+    "generate": "yarn generate:defs && yarn generate:meta",
+    "generate:defs": "ts-node --skip-project node_modules/.bin/polkadot-types-from-defs --package . --input ./src/interfaces",
+    "generate:meta": "ts-node --skip-project node_modules/.bin/polkadot-types-from-chain --package . --endpoint wss://khala-api.phala.network/ws --output ./src/interfaces"
+  },
+  "devDependencies": {
+    "@polkadot/typegen": "^9.4.2",
+    "@tsconfig/node16": "^1.0.3",
+    "@types/humps": "^2.0.2",
+    "@types/lodash": "^4.14.186",
+    "@types/node": "^16.11.62",
+    "pino-pretty": "^9.1.0",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "@fastify/autoload": "^5.4.0",
+    "@phala/typedefs": "^0.2.31",
+    "@polkadot/api": "^9.4.2",
+    "@polkadot/types": "^9.4.2",
+    "@polkadot/util": "^10.1.9",
+    "@polkadot/util-crypto": "^10.1.9",
+    "@types/node-schedule": "^2.1.0",
+    "@types/nodemailer": "^6.4.6",
+    "fastify": "^4.6.0",
+    "humps": "^2.0.1",
+    "level-ts": "^2.1.0",
+    "lodash": "^4.17.21",
+    "node-schedule": "^2.1.0",
+    "nodemailer": "^6.8.0",
+    "nodemailer-smtp-transport": "^2.7.4",
+    "nodemailer-wellknown": "^0.2.3",
+    "yarn": "^1.22.19"
+  },
+  "description": "A node.js server for indexing mining data.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ty01528/phaMoniterJs.git"
+  },
+  "author": "TianYuan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ty01528/phaMoniterJs/issues"
+  },
+  "homepage": "https://github.com/ty01528/phaMoniterJs#readme"
+}
