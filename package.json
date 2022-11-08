@@ -4,7 +4,7 @@
   "main": "dist/index.js",
   "packageManager": "yarn@3.2.3",
   "scripts": {
-    "build": "rm -rf dist && tsc",
+    "build": "del dist && tsc",
     "dev": "ts-node src/index.ts",
     "start": "NODE_ENV=production node dist/index.js",
     "generate": "yarn generate:defs && yarn generate:meta",

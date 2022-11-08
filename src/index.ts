@@ -6,8 +6,11 @@ import autoLoad from '@fastify/autoload'
 import path from 'path'
 import * as schedule from 'node-schedule';
 import {SavePoolInfo} from './models/stakePool'
+import {db} from './models/storedb'
 
 let monitor = new poolStakeMonitor()
+let newDb = new db()
+
 SavePoolInfo().then(() => {
     console.log("SavePoolInfo success")
 })
