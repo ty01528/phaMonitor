@@ -1,6 +1,5 @@
 import {getApi} from "../helper/polkadot";
 import {db} from "./storedb";
-import {number} from "@noble/hashes/_assert";
 
 let newDb = new db()
 

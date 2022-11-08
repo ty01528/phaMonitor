@@ -8,8 +8,9 @@ import * as schedule from 'node-schedule';
 import {SavePoolInfo} from './models/stakePool'
 import {db} from './models/storedb'
 
-let monitor = new poolStakeMonitor()
 let newDb = new db()
+newDb.init()
+let monitor = new poolStakeMonitor()
 
 SavePoolInfo().then(() => {
     console.log("SavePoolInfo success")
