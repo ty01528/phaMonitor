@@ -1,19 +1,6 @@
 import level from 'level-ts';
-import fs from 'fs';
 
 export class db {
-    // 查看文件夹是否存在，不存在则创建
-    async checkDirExist(p: string) {
-        if (!fs.existsSync(p)) {
-            fs.mkdirSync(p);
-        }
-    }
-    init() {
-        this.checkDirExist('./database/poolInfo')
-        this.checkDirExist('./database/pid2email')
-        this.checkDirExist('./database/email2pid')
-        this.checkDirExist('./database/poolList')
-    }
     private poolInfo_db = new level('./database/poolInfo');
     private pid2email_db = new level('./database/pid2email');
     private email2pid_db = new level('./database/email2pid');
